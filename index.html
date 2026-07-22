@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Понициклы в Казахстане — механические лошадки без батареек | Dadu</title>
-<meta name="description" content="Поницикл — лошадка, которая едет от прыжков ребёнка. Без батареек и зарядки. Чёрный конь, единорог и рыжий пони. Доставка по всему Казахстану от магазина Dadu.">
-<meta property="og:title" content="Пони, который скачет без батареек — Dadu">
-<meta property="og:description" content="Механические лошадки-понициклы для детей 3–9 лет. Едет от прыжков ребёнка. Доставка по Казахстану.">
+<title>Понициклы в Казахстане - механические лошадки без батареек | Dadu</title>
+<meta name="description" content="Поницикл - лошадка, которая едет от прыжков ребёнка. Без батареек и зарядки. Чёрный конь, единорог и рыжий пони. Доставка по всему Казахстану от магазина Dadu.">
+<meta property="og:title" content="Пони, который скачет без батареек - Dadu">
+<meta property="og:description" content="Механические лошадки-понициклы для детей 3-9 лет. Едет от прыжков ребёнка. Доставка по Казахстану.">
 <meta property="og:image" content="https://pony.dadu.kz/img/og.jpg">
 <meta property="og:url" content="https://pony.dadu.kz/">
 <meta property="og:type" content="website">
@@ -114,11 +114,10 @@ nav.desk a:hover{opacity:1;color:var(--saddle)}
 .btn svg{width:18px;height:18px}
 
 /* сцена с конём */
-.stage{position:relative;width:min(420px,88vw);margin:10px auto 0;flex:1;display:flex;align-items:flex-end}
+.stage{position:relative;width:min(420px,88vw);margin:14px auto 0;flex:1;display:flex;align-items:flex-end;justify-content:center;will-change:transform}
 .pony-hero{
-  width:100%;
-  -webkit-mask-image:radial-gradient(75% 72% at 50% 46%,#000 55%,transparent 76%);
-  mask-image:radial-gradient(75% 72% at 50% 46%,#000 55%,transparent 76%);
+  width:min(330px,72vw);margin:0 auto;
+  filter:drop-shadow(0 10px 18px rgba(33,26,18,.28));
   animation:ride 1s cubic-bezier(.45,0,.55,1) infinite;
   transform-origin:50% 100%;
   position:relative;z-index:2;
@@ -130,16 +129,16 @@ nav.desk a:hover{opacity:1;color:var(--saddle)}
   65%{transform:translateY(-10px) rotate(1deg)}
 }
 .shadow{
-  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  position:absolute;bottom:2px;left:50%;transform:translateX(-50%);
   width:62%;height:26px;border-radius:50%;
   background:rgba(33,26,18,.35);filter:blur(7px);
   animation:squash 1s cubic-bezier(.45,0,.55,1) infinite;z-index:1;
 }
 @keyframes squash{0%,100%{transform:translateX(-50%) scale(1)}50%{transform:translateX(-50%) scale(.78);opacity:.55}}
-.dust{position:absolute;bottom:30px;width:14px;height:14px;border-radius:50%;background:rgba(251,244,226,.55);filter:blur(2px);opacity:0;z-index:1}
-.dust.d1{left:16%;animation:puff 1s infinite .05s}
-.dust.d2{left:78%;animation:puff 1s infinite .12s}
-.dust.d3{left:32%;animation:puff 1s infinite .2s}
+.dust{position:absolute;bottom:8px;width:14px;height:14px;border-radius:50%;background:rgba(251,244,226,.55);filter:blur(2px);opacity:0;z-index:1}
+.dust.d1{left:22%;animation:puff 1s infinite .05s}
+.dust.d2{left:72%;animation:puff 1s infinite .12s}
+.dust.d3{left:38%;animation:puff 1s infinite .2s}
 @keyframes puff{0%,55%{opacity:0;transform:translate(0,0) scale(.5)}65%{opacity:.8}100%{opacity:0;transform:translate(-14px,-20px) scale(1.6)}}
 .cloud{position:absolute;background:rgba(251,244,226,.28);border-radius:99px;filter:blur(1px);z-index:0}
 .c1{width:110px;height:34px;top:16%;left:-60px;animation:drift 26s linear infinite}
@@ -164,9 +163,7 @@ h2{font-size:clamp(1.5rem,5.5vw,2.5rem);font-weight:900;text-transform:uppercase
 .step{
   background:var(--white);border:2px solid rgba(33,26,18,.09);border-radius:var(--r);
   padding:22px;display:flex;gap:16px;align-items:flex-start;
-  opacity:0;transform:translateY(30px);transition:.55s cubic-bezier(.2,1.2,.4,1);
 }
-.step.vis{opacity:1;transform:none}
 .step .ico{flex:none;width:54px;height:54px;border-radius:16px;background:var(--sun);display:grid;place-items:center}
 .step .ico svg{width:30px;height:30px}
 .step h3{font-size:1rem;margin-bottom:5px}
@@ -229,8 +226,7 @@ h2{font-size:clamp(1.5rem,5.5vw,2.5rem);font-weight:900;text-transform:uppercase
 .why .sec-eyebrow{color:var(--mane)}
 .wgrid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 @media(min-width:820px){.wgrid{grid-template-columns:repeat(3,1fr)}}
-.wcard{background:rgba(33,26,18,.22);border-radius:18px;padding:18px 16px;opacity:0;transform:translateY(24px) scale(.96);transition:.5s cubic-bezier(.2,1.2,.4,1)}
-.wcard.vis{opacity:1;transform:none}
+.wcard{background:rgba(33,26,18,.22);border-radius:18px;padding:18px 16px}
 .wcard .em{font-size:1.7rem;line-height:1;margin-bottom:9px;display:block}
 .wcard h3{font-size:.85rem;margin-bottom:5px}
 .wcard p{font-size:.82rem;opacity:.85;line-height:1.45}
@@ -278,11 +274,32 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 .fab svg{width:30px;height:30px;fill:#fff}
 @keyframes fabPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
 
+/* ---------- scroll-анимации ---------- */
+[data-anim]{opacity:0;transition:transform .8s cubic-bezier(.2,1.15,.35,1),opacity .8s ease;transition-delay:var(--d,0s)}
+[data-anim="up"]{transform:translateY(42px)}
+[data-anim="left"]{transform:translateX(-46px)}
+[data-anim="right"]{transform:translateX(46px)}
+[data-anim="zoom"]{transform:scale(.82)}
+[data-anim].vis{opacity:1;transform:var(--endt,none)}
+.rev{--endt:rotate(-.6deg)}
+.rev:nth-child(2){--endt:rotate(.7deg)}
+.rev:nth-child(3){--endt:rotate(-.4deg)}
+
+/* декоративные плавающие копыта с параллаксом */
+.float-hoof{position:absolute;opacity:.14;pointer-events:none;will-change:transform}
+.float-hoof svg{width:100%;height:100%}
+section{position:relative;overflow:hidden}
+
+/* счётчик-подпрыгивание цифр размеров */
+.size-card .big{transform-origin:left bottom}
+.size-card.vis .big{animation:popNum .7s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes popNum{0%{transform:scale(.4);opacity:0}100%{transform:scale(1);opacity:1}}
+
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
   .hero h1 .w{opacity:1;transform:none}
-  .step,.wcard{opacity:1;transform:none}
+  [data-anim]{opacity:1;transform:var(--endt,none)}
   .stall .door{display:none}
 }
 </style>
@@ -326,7 +343,7 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
       <span class="w" style="animation-delay:.28s">скачет</span>
       <span class="w no-batt" style="--tilt:-2deg;animation-delay:.45s">без батареек</span>
     </h1>
-    <p class="sub">Едет от прыжков ребёнка: скачешь в седле — пони мчится вперёд. Никаких зарядок, моторов и экранов.</p>
+    <p class="sub">Едет от прыжков ребёнка: скачешь в седле - пони мчится вперёд. Никаких зарядок, моторов и экранов.</p>
     <div class="cta-row">
       <a class="btn btn-dark" href="#catalog">Выбрать пони&nbsp;→</a>
       <a class="btn btn-wa" href="https://wa.me/77056007770?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BF%D0%BE%D0%BD%D0%B8%D1%86%D0%B8%D0%BA%D0%BB" target="_blank" rel="noopener">
@@ -336,7 +353,7 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
     </div>
     <div class="stage">
       <div class="cloud c1"></div><div class="cloud c2"></div>
-      <img class="pony-hero" src="img/pony-black.webp" alt="Поницикл — чёрный конь" width="900" height="1020" fetchpriority="high">
+      <img class="pony-hero" src="img/pony-hero.webp" alt="Поницикл - коричневый пони" width="261" height="392" fetchpriority="high">
       <div class="shadow"></div>
       <div class="dust d1"></div><div class="dust d2"></div><div class="dust d3"></div>
     </div>
@@ -348,26 +365,28 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 
 <!-- ============ КАК ЕДЕТ ============ -->
 <section id="how">
+  <div class="float-hoof" data-plx="-.12" style="top:8%;right:-14px;width:84px;height:84px;transform:rotate(18deg)"><svg viewBox="0 0 64 64" fill="#A99620"><ellipse cx="32" cy="28" rx="14" ry="15"/><path d="M20 38 A15 13 0 0 0 44 38 L44 48 A13 7 0 0 1 20 48 Z"/></svg></div>
+  <div class="float-hoof" data-plx=".09" style="bottom:12%;left:-20px;width:110px;height:110px;transform:rotate(-14deg)"><svg viewBox="0 0 64 64" fill="#B4622D"><ellipse cx="32" cy="28" rx="14" ry="15"/><path d="M20 38 A15 13 0 0 0 44 38 L44 48 A13 7 0 0 1 20 48 Z"/></svg></div>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Магия механики</div>
       <h2>Как он едет без мотора?</h2>
     </div>
     <div class="steps">
-      <div class="step">
+      <div class="step" data-anim="left">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#211A12" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="2.5"/><path d="M12 8v5l-4 6M12 13l4 6M7 11l5-2 5 2"/></svg></div>
         <div><h3>1. Садишься в седло</h3><p>Ноги на подножки, руки держат ручки на голове пони. Всё как у настоящего наездника.</p></div>
       </div>
-      <div class="step">
+      <div class="step" data-anim="right">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#211A12" stroke-width="2" stroke-linecap="round"><path d="M12 3v6M9 6l3 3 3-3M12 15v6M9 18l3-3 3 3"/></svg></div>
-        <div><h3>2. Прыгаешь — пони едет</h3><p>Механизм превращает каждый прыжок в движение вперёд. Чем активнее скачешь, тем быстрее мчишься.</p></div>
+        <div><h3>2. Прыгаешь - пони едет</h3><p>Механизм превращает каждый прыжок в движение вперёд. Чем активнее скачешь, тем быстрее мчишься.</p></div>
       </div>
-      <div class="step">
+      <div class="step" data-anim="left">
         <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#211A12" stroke-width="2" stroke-linecap="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
-        <div><h3>3. Рулишь куда хочешь</h3><p>Поворачиваешь за ручки — колёса послушно едут в сторону. Работает дома на любом полу и на улице.</p></div>
+        <div><h3>3. Рулишь куда хочешь</h3><p>Поворачиваешь за ручки - колёса послушно едут в сторону. Работает дома на любом полу и на улице.</p></div>
       </div>
     </div>
-    <div class="gallop-line" aria-hidden="true">
+    <div class="gallop-line" data-anim="zoom" aria-hidden="true">
       <div class="gr"></div>
       <div class="runner"><svg viewBox="0 0 64 64" fill="#211A12"><path d="M52 14c2-3 6-4 9-3-1 3-2 5-4 6l-3 5c1 3 1 6 0 9l-4 14c-1 2-3 3-5 2s-2-3-2-5l2-9c-4 2-9 3-14 2l-6 12c-1 2-3 3-5 2s-3-3-2-5l5-11c-4-2-7-6-8-10l-5 2c-2 1-4 0-5-2s0-4 2-5l8-3c3-6 9-10 17-10 7 0 12 3 15 7l5 2z"/></svg></div>
     </div>
@@ -378,15 +397,15 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 <!-- ============ КОНЮШНЯ / КАТАЛОГ ============ -->
 <section class="stable" id="catalog">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Каталог</div>
       <h2>Наша конюшня</h2>
-      <p style="opacity:.75;margin-top:8px">Нажми на стойло — двери откроются 🚪</p>
+      <p style="opacity:.75;margin-top:8px">Нажми на стойло - двери откроются 🚪</p>
     </div>
     <div class="stalls">
 
       <article class="stall" id="pony-black">
-        <div class="plate">Гром <small>3–9 лет</small></div>
+        <div class="plate">Гром <small>3-9 лет</small></div>
         <div class="doorway">
           <img src="img/pony-black.webp" alt="Чёрный поницикл с белыми носочками" loading="lazy">
           <div class="door L"></div><div class="door R"></div>
@@ -402,13 +421,13 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
       </article>
 
       <article class="stall uni" id="pony-unicorn">
-        <div class="plate">Звёздочка <small>3–9 лет</small></div>
+        <div class="plate">Звёздочка <small>3-9 лет</small></div>
         <div class="doorway">
           <img src="img/pony-unicorn.webp" alt="Поницикл единорог с розовой гривой" loading="lazy">
           <div class="door L"></div><div class="door R"></div>
         </div>
         <div class="stall-body">
-          <p>Белоснежный единорог с сияющим рогом, розовой гривой и накидкой. Мечта каждой принцессы — и она правда скачет.</p>
+          <p>Белоснежный единорог с сияющим рогом, розовой гривой и накидкой. Мечта каждой принцессы - и она правда скачет.</p>
           <div class="chips"><span class="chip">Блестящий рог</span><span class="chip">Розовая упряжь</span><span class="chip">Для принцесс</span></div>
           <div class="price-row">
             <span class="price">Цена по запросу</span>
@@ -418,13 +437,13 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
       </article>
 
       <article class="stall" id="pony-brown">
-        <div class="plate">Каштан <small>3–9 лет</small></div>
+        <div class="plate">Каштан <small>3-9 лет</small></div>
         <div class="doorway">
           <img src="img/pony-brown.webp" alt="Рыжий поницикл со светлой гривой" loading="lazy">
           <div class="door L"></div><div class="door R"></div>
         </div>
         <div class="stall-body">
-          <p>Классический рыжий пони со светлой гривой — как из деревенских каникул у бабушки. Самый обнимательный в конюшне.</p>
+          <p>Классический рыжий пони со светлой гривой - как из деревенских каникул у бабушки. Самый обнимательный в конюшне.</p>
           <div class="chips"><span class="chip">Мягкий плюш</span><span class="chip">Белые носочки</span><span class="chip">Классика</span></div>
           <div class="price-row">
             <span class="price">Цена по запросу</span>
@@ -439,72 +458,74 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 
 <!-- ============ РАЗМЕРЫ ============ -->
 <section id="sizes">
+  <div class="float-hoof" data-plx=".1" style="top:14%;left:-18px;width:90px;height:90px;transform:rotate(-22deg)"><svg viewBox="0 0 64 64" fill="#A99620"><ellipse cx="32" cy="28" rx="14" ry="15"/><path d="M20 38 A15 13 0 0 0 44 38 L44 48 A13 7 0 0 1 20 48 Z"/></svg></div>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Подбор по росту</div>
       <h2>Какой размер нужен?</h2>
     </div>
     <div class="size-grid">
-      <div class="size-card">
-        <div class="big">3–5 лет</div>
+      <div class="size-card" data-anim="up">
+        <div class="big">3-5 лет</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Малый размер — для роста от 90 см</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Малый размер - для роста от 90 см</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Нагрузка до 25 кг</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Лёгкий — ребёнок сам разгоняется с первого дня</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Лёгкий - ребёнок сам разгоняется с первого дня</li>
         </ul>
       </div>
-      <div class="size-card">
-        <div class="big">4–9 лет</div>
+      <div class="size-card" data-anim="up">
+        <div class="big">4-9 лет</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Средний размер — для роста от 100 см</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Средний размер - для роста от 100 см</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Нагрузка до 40 кг</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="#B4622D" stroke-width="2.4" stroke-linecap="round"><path d="M5 13l4 4L19 7"/></svg> Хватит на несколько лет активных скачек</li>
         </ul>
       </div>
     </div>
-    <p class="note" style="margin-top:14px">не уверены в размере? напишите рост ребёнка в WhatsApp — подберём 🐎</p>
+    <p class="note" style="margin-top:14px">не уверены в размере? напишите рост ребёнка в WhatsApp - подберём 🐎</p>
   </div>
 </section>
 
 <!-- ============ ПРЕИМУЩЕСТВА ============ -->
 <section class="why" id="benefits">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Почему родители выбирают</div>
       <h2>Игрушка, которая тренирует</h2>
     </div>
     <div class="wgrid">
-      <div class="wcard"><span class="em">🔋</span><h3>Ноль батареек</h3><p>Никаких зарядок и сгоревших моторов. Работает всегда.</p></div>
-      <div class="wcard"><span class="em">💪</span><h3>Спорт незаметно</h3><p>Прыжки укрепляют ноги, спину и пресс — ребёнок просто играет.</p></div>
-      <div class="wcard"><span class="em">📵</span><h3>Минус гаджеты</h3><p>Реальное движение вместо экрана. Оторваться сложно.</p></div>
-      <div class="wcard"><span class="em">🏠</span><h3>Дом и улица</h3><p>Колёса не царапают пол и уверенно едут по асфальту.</p></div>
-      <div class="wcard"><span class="em">🧸</span><h3>Мягкий и прочный</h3><p>Плюшевый снаружи, стальной каркас внутри.</p></div>
-      <div class="wcard"><span class="em">🎁</span><h3>Подарок-легенда</h3><p>Тот самый подарок, о котором вспоминают и через 20 лет.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">🔋</span><h3>Ноль батареек</h3><p>Никаких зарядок и сгоревших моторов. Работает всегда.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">💪</span><h3>Спорт незаметно</h3><p>Прыжки укрепляют ноги, спину и пресс - ребёнок просто играет.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">📵</span><h3>Минус гаджеты</h3><p>Реальное движение вместо экрана. Оторваться сложно.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">🏠</span><h3>Дом и улица</h3><p>Колёса не царапают пол и уверенно едут по асфальту.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">🧸</span><h3>Мягкий и прочный</h3><p>Плюшевый снаружи, стальной каркас внутри.</p></div>
+      <div class="wcard" data-anim="zoom"><span class="em">🎁</span><h3>Подарок-легенда</h3><p>Тот самый подарок, о котором вспоминают и через 20 лет.</p></div>
     </div>
   </div>
 </section>
 
 <!-- ============ ОТЗЫВЫ ============ -->
 <section id="reviews">
+  <div class="float-hoof" data-plx="-.09" style="bottom:6%;right:-16px;width:96px;height:96px;transform:rotate(12deg)"><svg viewBox="0 0 64 64" fill="#B4622D"><ellipse cx="32" cy="28" rx="14" ry="15"/><path d="M20 38 A15 13 0 0 0 44 38 L44 48 A13 7 0 0 1 20 48 Z"/></svg></div>
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Говорят родители</div>
       <h2>Отзывы</h2>
     </div>
     <div class="rev-row">
-      <div class="rev">
+      <div class="rev" data-anim="up">
         <div class="stars">★★★★★</div>
-        <p>«Дочка слезает с единорога только чтобы поесть. Уже неделю квартира — это ипподром. Качество отличное, швы крепкие.»</p>
+        <p>«Дочка слезает с единорога только чтобы поесть. Уже неделю квартира - это ипподром. Качество отличное, швы крепкие.»</p>
         <div class="who">Айгерим, Астана</div>
       </div>
-      <div class="rev">
+      <div class="rev" data-anim="up">
         <div class="stars">★★★★★</div>
         <p>«Сын перестал просить планшет по вечерам. Скачет по коридору наперегонки с младшей. Полы целые, соседи пока терпят 😄»</p>
         <div class="who">Ерлан, Алматы</div>
       </div>
-      <div class="rev">
+      <div class="rev" data-anim="up">
         <div class="stars">★★★★★</div>
-        <p>«Дарили на 4 года — восторг был такой, что торт остался без внимания. Собирать ничего не пришлось, достали и поехали.»</p>
+        <p>«Дарили на 4 года - восторг был такой, что торт остался без внимания. Собирать ничего не пришлось, достали и поехали.»</p>
         <div class="who">Мадина, Караганда</div>
       </div>
     </div>
@@ -514,14 +535,14 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 <!-- ============ ДОСТАВКА ============ -->
 <section id="delivery" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
+    <div class="sec-head" data-anim="up">
       <div class="sec-eyebrow">Как получить</div>
       <h2>Доставка по Казахстану</h2>
     </div>
     <div class="dost">
-      <div class="dcard"><h3>🏪 Самовывоз</h3><p>Заберите пони в магазине Dadu — заодно познакомитесь с ним лично.</p></div>
-      <div class="dcard"><h3>🚚 По городу</h3><p>Курьерская доставка до двери. Сроки и стоимость уточним в WhatsApp.</p></div>
-      <div class="dcard"><h3>🇰🇿 По Казахстану</h3><p>Отправляем в любой город страны надёжной транспортной компанией.</p></div>
+      <div class="dcard" data-anim="left"><h3>🏪 Самовывоз</h3><p>Заберите пони в магазине Dadu - заодно познакомитесь с ним лично.</p></div>
+      <div class="dcard" data-anim="left"><h3>🚚 По городу</h3><p>Курьерская доставка до двери. Сроки и стоимость уточним в WhatsApp.</p></div>
+      <div class="dcard" data-anim="left"><h3>🇰🇿 По Казахстану</h3><p>Отправляем в любой город страны надёжной транспортной компанией.</p></div>
     </div>
   </div>
 </section>
@@ -529,29 +550,29 @@ footer{background:var(--mane);color:rgba(251,244,226,.5);font-size:.8rem;text-al
 <!-- ============ FAQ ============ -->
 <section class="faq" id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-eyebrow">Вопрос — ответ</div>
+    <div class="sec-head" data-anim="up">
+      <div class="sec-eyebrow">Вопрос - ответ</div>
       <h2>Частые вопросы</h2>
     </div>
-    <details>
+    <details data-anim="up">
       <summary>Точно без батареек? Как он тогда едет?</summary>
-      <p>Внутри — механизм, который превращает движение ребёнка вверх-вниз в движение колёс вперёд. Ребёнок прыгает в седле — пони едет. Ломаться нечему: ни мотора, ни электроники.</p>
+      <p>Внутри - механизм, который превращает движение ребёнка вверх-вниз в движение колёс вперёд. Ребёнок прыгает в седле - пони едет. Ломаться нечему: ни мотора, ни электроники.</p>
     </details>
-    <details>
+    <details data-anim="up">
       <summary>С какого возраста можно кататься?</summary>
-      <p>С 3 лет. Малый размер рассчитан на детей 3–5 лет, средний — на 4–9 лет. Если сомневаетесь, напишите рост и возраст ребёнка — подберём подходящий.</p>
+      <p>С 3 лет. Малый размер рассчитан на детей 3-5 лет, средний - на 4-9 лет. Если сомневаетесь, напишите рост и возраст ребёнка - подберём подходящий.</p>
     </details>
-    <details>
+    <details data-anim="up">
       <summary>Не поцарапает ли пол дома?</summary>
-      <p>Нет, колёса из мягкого полиуретана — они не оставляют следов на ламинате, паркете и плитке, при этом отлично едут и по улице.</p>
+      <p>Нет, колёса из мягкого полиуретана - они не оставляют следов на ламинате, паркете и плитке, при этом отлично едут и по улице.</p>
     </details>
-    <details>
+    <details data-anim="up">
       <summary>Насколько это безопасно?</summary>
-      <p>Пони устойчив на четырёх опорах и не опрокидывается при нормальной езде, скорость полностью контролирует сам ребёнок: перестал прыгать — пони остановился.</p>
+      <p>Пони устойчив на четырёх опорах и не опрокидывается при нормальной езде, скорость полностью контролирует сам ребёнок: перестал прыгать - пони остановился.</p>
     </details>
-    <details>
+    <details data-anim="up">
       <summary>Нужно ли собирать?</summary>
-      <p>Минимальная сборка за несколько минут без специнструмента. Инструкция в комплекте, а если что — поможем по видеосвязи.</p>
+      <p>Минимальная сборка за несколько минут без специнструмента. Инструкция в комплекте, а если что - поможем по видеосвязи.</p>
     </details>
   </div>
 </section>
@@ -620,7 +641,11 @@ addEventListener('pointerdown', e=>{
   setTimeout(()=>d.remove(), 1200);
 }, {passive:true});
 
-// появление шагов и карточек, открытие дверей конюшни
+// scroll-появление: единая система с каскадной задержкой
+document.querySelectorAll('[data-anim]').forEach(el=>{
+  const sibs = [...el.parentElement.children].filter(c=>c.hasAttribute('data-anim'));
+  if(sibs.length>1) el.style.setProperty('--d', (sibs.indexOf(el)*.12)+'s');
+});
 const io = new IntersectionObserver(es=>{
   es.forEach(e=>{
     if(!e.isIntersecting) return;
@@ -631,8 +656,33 @@ const io = new IntersectionObserver(es=>{
     }
     io.unobserve(e.target);
   });
-},{threshold:.25});
-document.querySelectorAll('.step,.wcard,.stall').forEach(el=>io.observe(el));
+},{threshold:.2});
+document.querySelectorAll('[data-anim],.stall').forEach(el=>io.observe(el));
+
+// параллакс декора и героя при скролле
+const plx = [...document.querySelectorAll('[data-plx]')];
+const stage = document.querySelector('.stage');
+const heroH1 = document.querySelector('.hero h1');
+const heroSub = document.querySelector('.hero .sub');
+let tickingPlx = false;
+function parallax(){
+  const y = scrollY;
+  plx.forEach(el=>{
+    const r = el.parentElement.getBoundingClientRect();
+    el.style.translate = '0 ' + (r.top * parseFloat(el.dataset.plx)) + 'px';
+  });
+  if (y < innerHeight){
+    stage.style.translate = '0 ' + (y*0.22) + 'px';
+    const f = Math.max(0, 1 - y/(innerHeight*0.6));
+    heroH1.style.opacity = heroSub.style.opacity = f;
+    heroH1.style.translate = '0 ' + (y*0.18) + 'px';
+  }
+  tickingPlx = false;
+}
+addEventListener('scroll', ()=>{
+  if(!tickingPlx){ requestAnimationFrame(parallax); tickingPlx = true; }
+}, {passive:true});
+parallax();
 
 // повторное открытие дверей по тапу на стойло
 document.querySelectorAll('.stall .doorway').forEach(dw=>{
